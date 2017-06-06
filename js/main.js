@@ -1,6 +1,12 @@
 $(function() {
 /*--Main nav-----------------------------------*/ 
 
+	$('#navbar > .nav').smartmenus({
+		subIndicatorsText: '',
+		subMenusSubOffsetX: 1,
+    	subMenusSubOffsetY: 0
+	});
+
 	$('.navbar-toggle').jPushMenu({ closeOnClickLink: false });
 	$('.dropdown-toggle').dropdown();
 
@@ -38,7 +44,8 @@ $(function() {
 		loop: true,
 		smartSpeed: 500,
 		fluidSpeed: 500,
-		navSpeed: 500
+		navSpeed: 500,
+		center: true
 	});
 
 	$('.portfolio-nav .prev-slide').on('click', function() {

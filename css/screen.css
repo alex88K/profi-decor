@@ -68,7 +68,6 @@ body {
   line-height: 1.4;
   background-color: #fafafa;
   background-image: url(../images/wall-bg.jpg);
-  border-right: repeat;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -475,7 +474,7 @@ textarea:focus {
 }
 .navbar-nav .nav-item a {
   position: relative;
-  padding: 10px 25px 10px 25px;
+  padding: 10px 25px 7px 25px;
   font-size: 87.5%;
   color: #000;
   font-weight: 600;
@@ -495,16 +494,65 @@ textarea:focus {
 .navbar-nav > .nav-item:last-child > a {
   padding-right: 0;
 }
+.navbar-nav .dropdown-menu {
+  min-width: inherit;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.navbar-nav .dropdown-menu .caret {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -8px;
+  background-color: transparent;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+}
+.navbar-nav .dropdown-menu .caret .chevron-down {
+  top: 0;
+  fill: #000;
+}
+.navbar-nav .dropdown-menu li {
+  margin-bottom: 0;
+  padding-left: 0;
+  border-bottom: 1px solid transparent;
+}
+.navbar-nav .dropdown-menu li:before {
+  display: none;
+}
+.navbar-nav .dropdown-menu li a {
+  width: 250px;
+  padding: 10px 25px;
+  color: #000;
+  border: none;
+  background-color: rgba(250, 250, 250, 0.9);
+  white-space: pre-wrap;
+  font-size: 93%;
+}
+.navbar-nav .dropdown-menu li a:after {
+  display: none;
+}
+.navbar-nav .dropdown-menu li a:hover, .navbar-nav .dropdown-menu li a:active, .navbar-nav .dropdown-menu li a:focus {
+  color: #fff;
+  background-color: #cc142a;
+  border: none;
+}
+.navbar-nav .dropdown-menu li a:hover:after, .navbar-nav .dropdown-menu li a:active:after, .navbar-nav .dropdown-menu li a:focus:after {
+  display: none;
+}
+.navbar-nav .dropdown-menu li a:hover .chevron-down, .navbar-nav .dropdown-menu li a:active .chevron-down, .navbar-nav .dropdown-menu li a:focus .chevron-down {
+  fill: #fff;
+}
+.navbar-nav .dropdown-menu li.active a {
+  color: #fff;
+}
 
 .nav {
   margin: 0;
-}
-.nav .dropdown.open, .nav .dropdown.open > a, .nav .dropdown.open > a:hover {
-  color: #fff;
-  background: transparent;
-}
-.nav .dropdown:hover .dropdown-menu {
-  display: block;
 }
 .nav .dropdown > input,
 .nav .dropdown .drop-icon {
@@ -548,62 +596,27 @@ textarea:focus {
   background-color: #d12c3e;
   border: none;
   text-align: center;
-}
-.caret .chevron-down {
-  position: relative;
-  top: -2px;
-  width: 8px;
-  height: 8px;
-  fill: #fff;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
-.dropdown-menu {
-  left: 50%;
-  width: 285px;
-  min-width: inherit;
-  margin-left: -142.5px;
-  margin-top: -3px !important;
+.caret .chevron-down {
+  position: relative;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  fill: #fff;
+}
+.caret.navbar-toggle {
+  float: none;
   padding: 0;
-  border: none;
-  border-radius: 0;
-  text-align: center;
-  background-color: transparent;
-}
-.dropdown-menu .nav-item {
-  border-bottom: 1px solid transparent;
-}
-.dropdown-menu .nav-item a {
-  max-width: 285px;
-  padding: 10px 25px;
-  color: #000;
-  border: none;
-  background-color: rgba(250, 250, 250, 0.9);
-  white-space: pre-wrap;
-  font-size: 93%;
-}
-.dropdown-menu .nav-item a:after {
-  display: none;
-}
-.dropdown-menu .nav-item a:hover, .dropdown-menu .nav-item a:active, .dropdown-menu .nav-item a:focus {
-  color: #fff;
-  background-color: #cc142a;
-  border: none;
-}
-.dropdown-menu .nav-item a:hover:after, .dropdown-menu .nav-item a:active:after, .dropdown-menu .nav-item a:focus:after {
-  display: none;
-}
-.dropdown-menu .nav-item.active a {
-  color: #fff;
 }
 
-.navbar-toggle {
+.header > .navbar-toggle {
   z-index: 1100;
   position: absolute;
-  top: 0;
+  top: 62px;
   right: 20px;
   width: 32px;
   height: 35px;
@@ -611,56 +624,56 @@ textarea:focus {
   padding: 0;
   transition-duration: 0.5s;
 }
-.navbar-toggle .icon {
+.header > .navbar-toggle .icon {
   transition-duration: 0.5s;
   position: absolute;
   height: 3px;
   width: 30px;
   top: 18px;
-  background-color: #fff;
+  background-color: #000;
 }
-.navbar-toggle .icon:before {
+.header > .navbar-toggle .icon:before {
   transition-duration: 0.5s;
   position: absolute;
   width: 30px;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   content: "";
   top: -8px;
   left: 0px;
 }
-.navbar-toggle .icon:after {
+.header > .navbar-toggle .icon:after {
   transition-duration: 0.5s;
   position: absolute;
   width: 30px;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   content: "";
   top: 8px;
   left: 0;
 }
-.navbar-toggle.menu-active .icon {
+.header > .navbar-toggle.menu-active .icon {
   transition-duration: 0.5s;
   background: transparent;
 }
-.navbar-toggle.menu-active .icon:before {
+.header > .navbar-toggle.menu-active .icon:before {
   -webkit-transform: rotateZ(45deg) scaleX(1) translate(8px, 3px);
   -ms-transform: rotateZ(45deg) scaleX(1) translate(8px, 3px);
   -o-transform: rotateZ(45deg) scaleX(1) translate(8px, 3px);
   transform: rotateZ(45deg) scaleX(1) translate(8px, 3px);
 }
-.navbar-toggle.menu-active .icon:after {
+.header > .navbar-toggle.menu-active .icon:after {
   -webkit-transform: rotateZ(-45deg) scaleX(1) translate(8px, -3px);
   -ms-transform: rotateZ(-45deg) scaleX(1) translate(8px, -3px);
   -o-transform: rotateZ(-45deg) scaleX(1) translate(8px, -3px);
   transform: rotateZ(-45deg) scaleX(1) translate(8px, -3px);
 }
-.navbar-toggle:hover {
+.header > .navbar-toggle:hover {
   cursor: pointer;
 }
 
 .promo-nav {
-  z-index: 11;
+  z-index: 6;
   position: absolute;
   top: 55%;
   width: 100%;
@@ -1236,6 +1249,7 @@ textarea:focus {
 }
 
 .catalog-item {
+  margin-bottom: 40px;
   overflow: hidden;
 }
 .catalog-item img {
@@ -1284,8 +1298,13 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 1200px) {
-  .navbar-toggle {
+  .header > .navbar-toggle {
     display: block;
+  }
+
+  .brand-logo {
+    top: 20px;
+    left: 15px;
   }
 
   .container {
@@ -1298,7 +1317,7 @@ textarea:focus {
   }
   .main-menu .navbar-nav.nav {
     display: block;
-    padding-top: 40px;
+    padding-top: 0;
     text-align: left;
   }
   .main-menu .navbar-nav.nav .nav-item {
@@ -1322,49 +1341,69 @@ textarea:focus {
   .main-menu .navbar-nav.nav a {
     float: none;
     margin: 0;
-    padding: 18px 12px;
-    color: #fff;
+    padding: 12px;
+    color: #000;
     font-size: 87%;
     font-weight: 500;
-    border-bottom: 1px solid #128bac;
+    border-bottom: 1px solid #e2e2e2;
     white-space: pre-line;
   }
   .main-menu .navbar-nav.nav a:after {
     display: none;
   }
   .main-menu .navbar-nav.nav a:hover, .main-menu .navbar-nav.nav a:active, .main-menu .navbar-nav.nav a:focus {
-    color: #1399bd !important;
-    background-color: #f0f0f0;
+    color: #444 !important;
+    background-color: #e2e2e2;
     border-color: transparent;
   }
   .main-menu .navbar-nav.nav a:hover:after, .main-menu .navbar-nav.nav a:active:after, .main-menu .navbar-nav.nav a:focus:after {
     display: none;
   }
   .main-menu .navbar-nav.nav .nav-item.dropdown > a {
-    padding: 18px 42px 18px 12px;
+    padding: 12px;
   }
-  .main-menu .navbar-nav.nav .caret {
-    display: none;
-  }
-  .main-menu .navbar-nav.nav .drop-icon {
-    display: block;
-  }
-  .main-menu .navbar-nav.nav .dropdown-menu {
+  .main-menu .navbar-nav.nav .dropdown {
     position: static;
     float: none;
     background: #fff;
     padding: 0;
     box-shadow: none;
   }
-  .main-menu .navbar-nav.nav .dropdown-menu a {
+  .main-menu .navbar-nav.nav .dropdown a {
+    width: 100%;
     font-size: 94%;
     font-weight: normal;
     border-bottom: none;
-    color: #444;
+    color: #000;
     text-transform: none;
+  }
+  .main-menu .navbar-nav.nav .dropdown a .caret {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+    background-color: transparent;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  .main-menu .navbar-nav.nav .dropdown a .caret .chevron-down {
+    color: #000;
+    fill: #000;
+  }
+  .main-menu .navbar-nav.nav .dropdown .highlighted > .caret {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   .main-menu.collapse {
     display: block !important;
+  }
+
+  .navbar-nav .dropdown-menu {
+    min-width: 100% !important;
   }
 
   .navbar-collapse.collapse {
@@ -1373,7 +1412,7 @@ textarea:focus {
 
   /* General styles for all menus */
   .cbp-spmenu {
-    background: #1399bd;
+    background: #fff;
     position: fixed;
     padding: 35px 0;
     margin: 0 !important;
@@ -1383,12 +1422,12 @@ textarea:focus {
   }
 
   .cbp-spmenu h3 {
-    color: #fff;
+    color: #000;
     font-size: 1.9em;
     padding: 20px;
     margin: 0;
     font-weight: 300;
-    background: #0d77b6;
+    background: #fff;
   }
 
   .cbp-spmenu a {
@@ -1434,6 +1473,7 @@ textarea:focus {
   }
 
   .cbp-spmenu-left.cbp-spmenu-open {
+    z-index: 20;
     left: 0px;
   }
 
@@ -1492,6 +1532,29 @@ textarea:focus {
   }
 
   /*--END Menu------------------------------*/
+  .address,
+  .tel {
+    margin-right: 20px;
+  }
+
+  .tel {
+    margin-left: 20px;
+  }
+
+  .promo-slider-item .slider-info {
+    left: 10%;
+    width: 50%;
+  }
+
+  .tile-item {
+    margin: 0 25px 50px 25px;
+  }
+
+  .tile-item:nth-child(3n) {
+    margin-right: 25px;
+  }
+
+  /**/
   .advantage-list {
     -webkit-justify-content: space-around;
     justify-content: space-around;
@@ -1537,13 +1600,16 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 990px) {
+  .header-top .contact-b .address,
+  .header-top .contact-b .tel {
+    display: none;
+  }
+
   .section-title {
-    font-size: 36px;
+    font-size: 160%;
   }
 
   .f-cols {
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
     padding: 0 15px;
   }
 
@@ -1570,8 +1636,123 @@ textarea:focus {
     padding-top: 10px;
   }
 }
+@media screen and (max-width: 768px) {
+  .promo-slider-item .slider-info {
+    width: 100%;
+    left: 0;
+  }
+  .promo-slider-item .slider-title {
+    font-size: 160%;
+  }
+
+  .promo-nav {
+    top: inherit;
+    bottom: 20px;
+  }
+
+  .navbar-nav .open .dropdown-menu .dropdown-header,
+  .navbar-nav .open .dropdown-menu > li > a {
+    padding: 10px 15px 10px 25px;
+  }
+}
 @media screen and (max-width: 680px) {
+  .tile-item {
+    margin: 0 0 30px 0;
+  }
+
   .f-col {
     flex-basis: 100%;
   }
+}
+/*
+ You probably do not need to edit this at all.
+
+ Add some SmartMenus required styles not covered in Bootstrap 3's default CSS.
+ These are theme independent and should work with any Bootstrap 3 theme mod.
+*/
+/* sub menus arrows on desktop */
+/*.navbar-nav:not(.sm-collapsible) ul .caret {
+	position: absolute;
+	right: 0;
+	margin-top: 6px;
+	margin-right: 15px;
+}*/
+.navbar-nav:not(.sm-collapsible) ul a.has-submenu {
+  padding-right: 30px;
+}
+
+/* make sub menu arrows look like +/- buttons in collapsible mode */
+/*.navbar-nav.sm-collapsible .caret, 
+.navbar-nav.sm-collapsible ul .caret {
+	position: absolute;
+	right: 0;
+	margin: -3px 15px 0 0;
+	padding: 0;
+	width: 32px;
+	height: 26px;
+	line-height: 24px;
+	text-align: center;
+}*/
+/*.navbar-nav.sm-collapsible .caret:before {
+	content: '+';
+}
+.navbar-nav.sm-collapsible .open > a > .caret:before {
+	content: '-';
+}*/
+/*.navbar-nav.sm-collapsible a.has-submenu { padding-right: 50px; }*/
+/* revert to Bootstrap's default carets in collapsible mode when the "data-sm-skip-collapsible-behavior" attribute is set to the ul.navbar-nav */
+/*.navbar-nav.sm-collapsible[data-sm-skip-collapsible-behavior] .caret, 
+.navbar-nav.sm-collapsible[data-sm-skip-collapsible-behavior] ul .caret {
+	position: static;
+	margin: 0 0 0 2px;
+	padding: 0;
+	width: 0;
+	height: 0;
+}*/
+/*.navbar-nav.sm-collapsible[data-sm-skip-collapsible-behavior] .caret:before {
+	content: '' !important;
+}*/
+/* scrolling arrows for tall menus */
+.navbar-nav span.scroll-up, .navbar-nav span.scroll-down {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navbar-nav span.scroll-up-arrow,
+.navbar-nav span.scroll-down-arrow {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.navbar-nav span.scroll-down-arrow {
+  top: 6px;
+}
+
+/* add more indentation for 2+ level sub in collapsible mode - Bootstrap normally supports just 1 level sub menus */
+/* fix SmartMenus sub menus auto width (subMenusMinWidth and subMenusMaxWidth options) */
+.navbar-nav .dropdown-menu > li > a {
+  white-space: normal;
+}
+
+.navbar-nav ul.sm-nowrap > li > a {
+  white-space: nowrap;
+}
+
+.navbar-nav.sm-collapsible ul.sm-nowrap > li > a {
+  white-space: normal;
+}
+
+/* fix .navbar-right subs alignment */
+.navbar-right ul.dropdown-menu {
+  left: 0;
+  right: auto;
 }

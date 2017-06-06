@@ -19,14 +19,24 @@
    <nav class="navbar">
    	<div class="container">
    		<div class="main-menu collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="navbar">
-		   	<ul class="nav navbar-nav">
+		   	<ul class="nav navbar-nav sm sm-simple">
 			   	<li class="nav-item"><a href="inner.php">О нас</a></li>
 			   	<li class="nav-item dropdown">
-			   		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог услуг<span class="caret"><svg class="chevron-down"><use xlink:href="#chevron-right"></use></svg></span></a>
+			   		<a href="spec.php">Каталог услуг<span class="caret"><svg class="chevron-down"><use xlink:href="#chevron-right"></use></svg></span></a>
 			   		<ul class="dropdown-menu">
 			   			<li class="nav-item"><a href="inner-page.php">Поклейка обоев</a></li>
 			   			<li class="nav-item"><a href="inner-page.php">Декоративные работы</a></li>
-			   			<li class="nav-item"><a href="inner-page.php">Подготовка стен, укладка плитки</a></li>
+			   			<li class="nav-item">
+			   				<a href="inner-page11.php">Подготовка стен, укладка плитки<span class="caret"><svg class="chevron-down"><use xlink:href="#chevron-right"></use></svg></span></a>
+			   				<ul class="dropdown-menu">
+			   					<li><a href="s1.php">Ремонт после ремонта, реставрация</a></li>
+			   					<li><a href="s1.php">Укладка плитки</a></li>
+			   					<li><a href="s1.php">Монтаж плинтуса, багета, молдинга</a></li>
+			   					<li><a href="s1.php">Консультация и помощь в приобретении материалов</a></li>
+			   					<li><a href="s1.php">Проведение экспертиз</a></li>
+			   					<li><a href="s1.php">Выезд оценка расчет</a></li>
+			   				</ul>
+			   			</li>
 			   		</ul>
 			   	</li>
 			   	<li class="nav-item"><a href="inner.php">Галерея работ</a></li>

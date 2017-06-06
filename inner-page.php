@@ -19,8 +19,8 @@
 				<article class="content txt-block">
 					<div class="article-slider">
 						<ul class="owl-carousel slider-wraper">
-							<li class="slider-item"><img src="pic/article/wallpaper1.jpg" widht="1164" height="368" alt="wallpaper"></li>
-							<li class="slider-item"><img src="pic/article/wallpaper1.jpg" widht="1164" height="368" alt="wallpaper"></li>
+							<li class="slider-item"><img src="pic/article/wallpaper1.jpg" width="1164" height="368" alt="wallpaper"></li>
+							<li class="slider-item"><img src="pic/article/wallpaper1.jpg" width="1164" height="368" alt="wallpaper"></li>
 						</ul>
 						<div class="article-nav">
 	                  <div class="article-nav-item prev-slide"><svg class="chevron-slider"><use xlink:href="#chevron-slider"></use></svg></div>
@@ -30,6 +30,13 @@
 					<p>Тоника вероятна. Наряду с нейтральной лексикой мифопоэтический хронотоп существенно аннигилирует диалогический контекст. Начальная стадия проведения исследования, несмотря на внешние воздействия, актаульна как никогда. Узнаваемость марки осознаёт диссонансный побочный PR-эффект, опираясь на опыт западных коллег.</p>
 					<p>Взаимодействие корпорации и клиента тормозит механизм сочленений. Узнавание бренда, согласно традиционным представлениям, недоступно притягивает SWOT-анализ, полагаясь на инсайдерскую информацию. Драма, как следует из вышесказанного, уязвима.</p>
 					<p>Экспертиза выполненного проекта аллитерирует былинный направленный маркетинг. Ритмический рисунок концентрирует анализ зарубежного опыта. Ударение редко соответствует рыночным ожиданиям. Имидж непосредственно допускает стратегический рыночный план.</p>
+					<ul>
+						<li>lsfsdfds klfsdk ;lfsd f</li>
+						<li><a href="/">Ссылка на что-то</a></li>
+						<li>Lorem5</li>
+						<li>ekor kwrkfsd </li>
+						<li>sd fsd fewewee</li>
+					</ul>
 				</article>
 			</div>
 		</div>
