@@ -4,12 +4,12 @@
 			<div class="form-title">Заказать обратный звонок</div>
 			<form action="#" class="contact-form">
             <div class="form-group">
-               <input type="text" class="form-control" name="uname" placeholder="Ваше имя">
+               <input type="text" name="uname" placeholder="Ваше имя">
             </div>
             <div class="form-group">
-               <input type="text" class="form-control" name="phone" placeholder="Ваш телефон">
+               <input type="text" name="phone" placeholder="Ваш телефон">
             </div>
-            <div class="form-group submit-wrap"><input type="submit" name="submit" class="btn btn-submit" value="Отправить"></div>
+            <div class="form-group submit-wrap"><input type="submit" name="submit" class="btn btn-b btn-submit" value="Отправить"></div>
          </form>
 		</div>
       <button class="close" data-dismiss="modal"></button>

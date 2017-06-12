@@ -9,7 +9,7 @@
 			<div class="contact-b">
 				<div class="address"><svg class="svg-i pin-i"><use xlink:href="#pin-i"></use></svg>г. Москва, ул. Тверская, д. 4, оф. 234</div>
 				<a href="tel:+79998887766" class="tel"><svg class="svg-i phone-i"><use xlink:href="#phone-i"></use></svg>+7 (999) 888 77 66</a>
-				<button type="button" class="btn btn-callback" data-toggle="modal" modal-target="#modal-callback">Оставить заявку</button>
+				<button type="button" class="btn btn-callback" data-toggle="modal" data-target="#modal-callback">Оставить заявку</button>
 			</div>
 		</div>
    </div>
@@ -22,7 +22,7 @@
 		   	<ul class="nav navbar-nav sm sm-simple">
 			   	<li class="nav-item"><a href="inner.php">О нас</a></li>
 			   	<li class="nav-item dropdown">
-			   		<a href="spec.php">Каталог услуг<span class="caret"><svg class="chevron-down"><use xlink:href="#chevron-right"></use></svg></span></a>
+			   		<a href="services.php">Каталог услуг<span class="caret"><svg class="chevron-down"><use xlink:href="#chevron-right"></use></svg></span></a>
 			   		<ul class="dropdown-menu">
 			   			<li class="nav-item"><a href="inner-page.php">Поклейка обоев</a></li>
 			   			<li class="nav-item"><a href="inner-page.php">Декоративные работы</a></li>

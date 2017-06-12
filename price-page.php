@@ -103,6 +103,8 @@
                         <textarea class="ucomment" placeholder="Комментарий"></textarea>
                      </div>
                   </div>
+               </div>
+               <div class="row">
                   <div class="col-md-12 submit-wrap">
                      <input type="submit" class="btn btn-submit" value="Перезвоните мне">
                   </div>

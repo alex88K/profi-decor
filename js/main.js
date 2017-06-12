@@ -74,6 +74,25 @@ $(function() {
 		article_sl.trigger('next.owl.carousel');
 	});
 
+	$('.collapse').on('show.bs.collapse', function(){
+		$('.collapse').collapse('hide');
+		$('.catalog-link[href=#' + $(this).attr('id') + ']').addClass('active');
+	});
+
+	$('.collapse').on('hide.bs.collapse', function(){
+		$('.catalog-link[href=#' + $(this).attr('id') + ']').removeClass('active');
+	});
+
+/*--AJAX Form submit--------------------*/
+
+	$(document).on('af_complete', function(event,response) {
+		var form_id = response.form.parents('.modal').attr('id');
+		if (response.success) {
+			$('#'+form_id).modal('hide');
+			$('#modal-mes').modal('show');
+		}
+	});
+
 /*--Animation-------------------*/
 
 	window.sr = ScrollReveal();
@@ -184,3 +203,20 @@ $(function() {
 		closeOnClickLink: true
 	};
 })(jQuery);
+
+/* SVG fix for Firefox */ 
+(function(document, window) {
+	"use strict";
+
+	document.addEventListener("DOMContentLoaded", function() {
+		var baseUrl = window.location.href
+			.replace(window.location.hash, "");
+		[].slice.call(document.querySelectorAll("use[*|href]"))
+			.filter(function(element) {
+				return (element.getAttribute("xlink:href").indexOf("#") === 0);
+			})
+			.forEach(function(element) {
+				element.setAttribute("xlink:href", baseUrl + element.getAttribute("xlink:href"));
+			});
+	}, false);
+}(document, window));
