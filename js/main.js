@@ -74,12 +74,37 @@ $(function() {
 		article_sl.trigger('next.owl.carousel');
 	});
 
-	$('.collapse').on('show.bs.collapse', function(){
+/*--Catalog page------------------------*/ 
+
+	if ( $('.catalog-item').length > 0 ) {
+		var href = window.location.href;
+		var subStart = href.indexOf('#catalog');
+		var activeSubCategory = '';
+		var catalogLink = $('.catalog-link');
+
+		console.log( window.location.href );
+		window.location.hash = "";
+		
+		if( subStart !== -1 ) {
+			$.each(catalogLink, function(index, value) {
+				activeSubCategory = href.slice(subStart);
+
+				if( $(this).attr('href') === activeSubCategory ) {
+					catalogLink.eq(index).addClass('active').attr('aria-expanded', 'true');
+					$('.tab-content').find(activeSubCategory).addClass('in');
+
+				}
+			});
+		}
+	}
+
+	$('.tab-content .collapse').on('show.bs.collapse', function(){
 		$('.collapse').collapse('hide');
+		$('.catalog-link').removeClass('active');
 		$('.catalog-link[href=#' + $(this).attr('id') + ']').addClass('active');
 	});
 
-	$('.collapse').on('hide.bs.collapse', function(){
+	$('.tab-content .collapse').on('hide.bs.collapse', function(){
 		$('.catalog-link[href=#' + $(this).attr('id') + ']').removeClass('active');
 	});
 
@@ -211,6 +236,9 @@ $(function() {
 	document.addEventListener("DOMContentLoaded", function() {
 		var baseUrl = window.location.href
 			.replace(window.location.hash, "");
+
+		if( baseUrl.indexOf("#") !== -1 ) { baseUrl = baseUrl.replace("#", ""); }
+			
 		[].slice.call(document.querySelectorAll("use[*|href]"))
 			.filter(function(element) {
 				return (element.getAttribute("xlink:href").indexOf("#") === 0);

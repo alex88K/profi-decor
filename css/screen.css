@@ -869,6 +869,9 @@ textarea:focus {
   border: 2px solid #fff;
   color: #cc162a;
 }
+.tile-item + .modal .modal-dialog {
+  width: 80%;
+}
 
 .tile-img {
   width: 350px;
@@ -1308,6 +1311,19 @@ textarea:focus {
   transition: all .3s ease;
 }
 
+.catalog-sublist ul {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  -o-column-width: 33%;
+  column-width: 33%;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  -o-column-gap: 30px;
+  column-gap: 30px;
+}
 .catalog-sublist ul a {
   font-weight: 600;
   color: #030b1d;
@@ -1814,8 +1830,22 @@ textarea:focus {
     display: none;
   }
 
+  .catalog-sublist ul {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    -o-column-width: 100%;
+    column-width: 100%;
+  }
+
   .tab-content {
     margin-top: 20px;
+  }
+
+  .tile-item + .modal .modal-dialog {
+    width: auto;
   }
 }
 @media screen and (max-width: 680px) {
