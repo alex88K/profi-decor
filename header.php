@@ -8,7 +8,10 @@
 			</a>
 			<div class="contact-b">
 				<div class="address"><svg class="svg-i pin-i"><use xlink:href="#pin-i"></use></svg>г. Москва, ул. Тверская, д. 4, оф. 234</div>
-				<a href="tel:+79998887766" class="tel"><svg class="svg-i phone-i"><use xlink:href="#phone-i"></use></svg>+7 (999) 888 77 66</a>
+				<div class="tel">
+					<a href="tel:+79998887766"><svg class="svg-i phone-i"><use xlink:href="#phone-i"></use></svg>+7 (999) 888 77 66</a>
+					<a href="tel:+79998887766"><svg class="svg-i phone-i"><use xlink:href="#phone-i"></use></svg>+7 (999) 888 77 66</a>
+				</div>
 				<button type="button" class="btn btn-callback" data-toggle="modal" data-target="#modal-callback">Оставить заявку</button>
 			</div>
 		</div>

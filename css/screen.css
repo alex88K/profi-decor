@@ -407,7 +407,11 @@ textarea:focus {
 .tel {
   margin-left: 60px;
 }
-.tel:hover, .tel:focus {
+.tel a {
+  margin-right: 12px;
+  color: #fff;
+}
+.tel a:hover, .tel a:focus {
   color: #fff;
 }
 
@@ -817,15 +821,12 @@ textarea:focus {
   position: relative;
   display: inline-block;
   width: 350px;
-  margin: 0 55px 50px 0;
+  margin: 0 18px 34px 18px;
   padding-left: 0;
   overflow: hidden;
   -webkit-transition: all .4s ease;
   -o-transition: all .4s ease;
   transition: all .4s ease;
-}
-.tile-item:nth-child(3n) {
-  margin-right: 0;
 }
 .tile-item:before {
   display: none;
@@ -920,6 +921,20 @@ textarea:focus {
 .tile-title i {
   display: block;
   text-transform: none;
+}
+
+.comparison p {
+  margin-top: 1.2em;
+  padding: 0 2em;
+  text-align: left;
+}
+.comparison .modal-content .row:first-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+.comparison .modal-content .row:first-child .col-md-6 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /*--Gallery section------------------*/

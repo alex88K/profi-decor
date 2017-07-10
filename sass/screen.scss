@@ -291,8 +291,12 @@ textarea {
 
 .tel { 
 	margin-left: 60px; 
-	&:hover,
-	&:focus { color: #fff; }
+	a {
+		margin-right: 12px;
+		color: #fff;
+		&:hover,
+		&:focus { color: #fff; }
+	}
 }
 
 .brand-logo {
@@ -676,13 +680,12 @@ textarea {
 	position: relative;
 	display: inline-block;
 	width: 350px;
-	margin: 0 55px 50px 0;
+	margin: 0 18px 34px 18px;
 	padding-left: 0;
 	overflow: hidden;
 	-webkit-transition: all .4s ease;
 	-o-transition: all .4s ease;
 	transition: all .4s ease;
-	&:nth-child(3n) { margin-right: 0; } 
 	&:before { display: none; }
 	&:after {
 		content: '';
@@ -769,6 +772,22 @@ textarea {
 	i {
 		display: block;
 		text-transform: none;
+	}
+}
+
+.comparison {
+	p {
+		margin-top: 1.2em;
+		padding: 0 2em;
+		text-align: left;
+	}
+	.modal-content .row:first-child {
+		margin-left: 0;
+		margin-right: 0;
+		.col-md-6 {
+			padding-right: 0;
+			padding-left: 0;
+		}
 	}
 }
 

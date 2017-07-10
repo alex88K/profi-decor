@@ -82,17 +82,15 @@ $(function() {
 		var activeSubCategory = '';
 		var catalogLink = $('.catalog-link');
 
-		console.log( window.location.href );
 		window.location.hash = "";
 		
 		if( subStart !== -1 ) {
-			$.each(catalogLink, function(index, value) {
-				activeSubCategory = href.slice(subStart);
+			activeSubCategory = href.slice(subStart);
 
+			$.each(catalogLink, function(index, value) {
 				if( $(this).attr('href') === activeSubCategory ) {
 					catalogLink.eq(index).addClass('active').attr('aria-expanded', 'true');
 					$('.tab-content').find(activeSubCategory).addClass('in');
-
 				}
 			});
 		}
